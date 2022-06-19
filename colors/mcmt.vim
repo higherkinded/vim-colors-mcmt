@@ -1,5 +1,5 @@
 " Maintainer: higherkinded <hknd@tuta.io>
-" Version:    1.0.0
+" Version:    1.1.0
 
 if &background == 'dark'
     let s:xormask = 0xFF
@@ -127,7 +127,7 @@ call s:hi('Sign',                 s:fnt,  s:nil)
 call s:hi('WildMenu',             s:fg,   s:nil)
 call s:hi('PmenuSel',             s:bg,   s:drk)
 call s:hi('PmenuSbar',            s:fg,   s:fnt)
-call s:hi('Pmenu',                s:mfnt, s:bfg)
+call s:hi('Pmenu',                s:fg,   s:mfnt)
 call s:hi('PmenuThumb',           s:fg,   s:drk)
 call s:hi('Tabline',              s:fg,   s:fnt,  s:norm)
 call s:hi('TablineFill',          s:bg,   s:fg,   s:norm)
