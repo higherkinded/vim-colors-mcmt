@@ -35,7 +35,9 @@ func! s:hi(what, fg, ...)
     endif
 
     if type(l:st) == type('')
-        let l:exestring .= ' gui=' . l:st . ' '
+        let l:exestring .= ' gui='   . l:st . ' '
+        let l:exestring .= ' cterm=' . l:st . ' '
+        let l:exestring .= ' term='  . l:st . ' '
         let l:dohi = 1
     endif
 
@@ -77,7 +79,7 @@ call s:hi('Normal',               s:fg,   s:bg)
 call s:hi('LineNr',               s:fnt,  s:bg)
 call s:hi('NonText',              s:bg,   s:nil)
 call s:hi('Comment',              s:fnt,  s:nil)
-call s:hi('CursorLine',           s:nil,  s:vfnt)
+call s:hi('CursorLine',           s:nil,  s:vfnt, s:norm)
 call s:hi('CursorColumn',         s:nil,  s:vfnt)
 call s:hi('ColorColumn',          s:nil,  s:vfnt)
 call s:hi('CursorLineNr',         s:fg,   s:vfnt, s:norm)
